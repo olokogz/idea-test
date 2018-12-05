@@ -61,8 +61,16 @@ public class HelloWorld {
         int mod1=x%4;
         int mod2=-x%4;
         int mod3=-x&-4;*/
+        int[][] tab = new int[2][3];
+        for(int i=0;i<tab.length;i++)
+            for(int j=0;j<tab[i].length;j++)
+            {
+                System.out.println(tab[i][j]);
+            }
 
-
+        for(int[] z : tab) {
+            System.out.println(z);
+        }
 
     }
 }
