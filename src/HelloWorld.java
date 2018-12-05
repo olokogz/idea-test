@@ -8,5 +8,6 @@ public class HelloWorld {
         oct=073;
         hex=0x3F;
         System.out.println(bin+" "+oct+" "+hex);
+        int liczba =8;
     }
 }
