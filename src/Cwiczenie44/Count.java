@@ -25,6 +25,7 @@ public class Count {
                 divByd2++;
             else if(i%dzielnik3==0)
                 divByd3++;
+
         }
         return "Liczb podzielnych przez "+dzielnik+" jest: "+divByd0+"\n"
                 +"Liczb podzielnych przez "+dzielnik1+" jest jest: "+divByd1+"\n"

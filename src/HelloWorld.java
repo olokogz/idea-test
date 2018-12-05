@@ -32,7 +32,7 @@ public class HelloWorld {
         new Task();
 
         Date d = new Date(2018,06,2);
-        java.util.Date date = new java.util.Date();*/
+        java.util.Date date = new java.util.Date();
         System.out.println(Math.sin(Math.PI*10/180));
         System.out.println(sin(PI*10/180));
 
@@ -42,6 +42,26 @@ public class HelloWorld {
         Liczba l = new Liczba(5);
         h.changeVal(l);
         System.out.println(l.a);
+        int x=-8;
+        int sum=x+3;
+
+        x=-x;
+        System.out.println();
+        try {
+            double iloraz1 = x / 4;
+            double iloraz2 = x / 4.0;
+            //double iloraz3 = x / 0;
+            double iloraz4 = x / 0.0;
+            double iloraz5 = x / 0.0;
+        }catch(ArithmeticException ex)
+        {
+            System.out.println("Nie dzielimy przez 0");
+        }
+
+        int mod1=x%4;
+        int mod2=-x%4;
+        int mod3=-x&-4;*/
+
 
 
     }
