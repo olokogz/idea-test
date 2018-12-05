@@ -1,4 +1,6 @@
 import Traveloffice.Date;
+import static java.lang.Math.PI;
+import static java.lang.Math.sin;
 public class HelloWorld {
 
     public static void main(String[] args) {
@@ -18,11 +20,14 @@ public class HelloWorld {
 
         byte b1=100;
         byte b2=2;
-        byte b3=(byte)(b1+b2);*/
+        byte b3=(byte)(b1+b2);
         new Task();
 
         Date d = new Date(2018,06,2);
-        java.util.Date date = new java.util.Date();
+        java.util.Date date = new java.util.Date();*/
+        System.out.println(Math.sin(Math.PI*10/180));
+        System.out.println(sin(PI*10/180));
+
 
 
     }
