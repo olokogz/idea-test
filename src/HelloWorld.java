@@ -12,7 +12,7 @@ public class HelloWorld {
 
     public static void main(String[] args) {
 
-<<<<<<< HEAD
+
         /*int bin,hex,oct;
 
         bin=0b101;
@@ -37,12 +37,12 @@ public class HelloWorld {
         System.out.println(sin(PI*10/180));
 
 
-=======
+
         HelloWorld h = new HelloWorld();
         Liczba l = new Liczba(5);
         h.changeVal(l);
         System.out.println(l.a);
->>>>>>> first
+
 
     }
 }
