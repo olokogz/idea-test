@@ -1,8 +1,9 @@
+import Traveloffice.Date;
 public class HelloWorld {
 
     public static void main(String[] args) {
 
-        int bin,hex,oct;
+        /*int bin,hex,oct;
 
         bin=0b101;
         oct=073;
@@ -17,6 +18,12 @@ public class HelloWorld {
 
         byte b1=100;
         byte b2=2;
-        byte b3=(byte)(b1+b2);
+        byte b3=(byte)(b1+b2);*/
+        new Task();
+
+        Date d = new Date(2018,06,2);
+        java.util.Date date = new java.util.Date();
+
+
     }
 }
