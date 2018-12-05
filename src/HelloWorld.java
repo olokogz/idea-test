@@ -2,12 +2,11 @@ public class HelloWorld {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello World");
+        int bin,hex,oct;
 
-        for(int i=0;i<=10;i++)
-        {
-            System.out.println(i);
-        }
-        System.out.println("zmiany");
+        bin=0b101;
+        oct=073;
+        hex=0x3F;
+        System.out.println(bin+" "+oct+" "+hex);
     }
 }
