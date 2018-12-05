@@ -3,8 +3,16 @@ import static java.lang.Math.PI;
 import static java.lang.Math.sin;
 public class HelloWorld {
 
+    public void changeVal(Liczba val)
+    {
+        val.a=10;
+
+    }
+
+
     public static void main(String[] args) {
 
+<<<<<<< HEAD
         /*int bin,hex,oct;
 
         bin=0b101;
@@ -29,6 +37,12 @@ public class HelloWorld {
         System.out.println(sin(PI*10/180));
 
 
+=======
+        HelloWorld h = new HelloWorld();
+        Liczba l = new Liczba(5);
+        h.changeVal(l);
+        System.out.println(l.a);
+>>>>>>> first
 
     }
 }
