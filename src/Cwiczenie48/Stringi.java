@@ -21,7 +21,7 @@ public class Stringi {
             tab[i]=string.charAt(i);
         }
         char[] temp = new char[string.length()];
-         for(int i=string.length()-1;i<=0;i--)
+         for(int i=string.length()-1;i>=0;i--)
          {
              sb.append(tab[i]);
          }

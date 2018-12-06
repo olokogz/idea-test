@@ -1,10 +1,24 @@
 package Traveloffice;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 public class Trip {
 
     private Date start;
     private Date end;
     private String destination;
+    private BigDecimal price;
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+
 
     public Date getStart() {
         return start;
@@ -30,17 +44,20 @@ public class Trip {
         this.destination = destination;
     }
 
-    public Trip(Date start, Date end, String destination)
+    public Trip(Date start, Date end, String destination, BigDecimal price)
     {
         setDestination(destination);
         setEnd(end);
         setStart(start);
+        setPrice(price);
     }
 
-    public String getInfo()
-    {
-        return " Data startu wycieczki: "+start.getInfo()
-                +" Data konca wycieczki: "+end.getInfo()
-                +" Kierunek wycieczki: "+destination;
+    @Override
+    public String toString() {
+        return " Start wycieczki: " + start +
+                ", Koniec wycieczki: " + end +
+                ", Cel podrozy: " + destination + '\'' +
+                ", Koszt podróży: "+getPrice()+
+                '}';
     }
 }

@@ -35,12 +35,20 @@ public class Customer {
         setName(name);
     }
 
-    public String getiInfo()
+    /*public String getiInfo()
     {
         return "Imie klienta: "+name
                 +address.getInfo()
                 +trip.getInfo();
+    }*/
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Imie klienta: ");
+        sb.append(name);
+        sb.append(address.toString());
+        sb.append(trip.toString());
+        return sb.toString();
     }
-
-
 }

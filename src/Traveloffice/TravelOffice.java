@@ -1,5 +1,7 @@
 package Traveloffice;
 
+import java.util.Arrays;
+
 public class TravelOffice {
 
     private Customer[] customers = new Customer[2];
@@ -25,7 +27,7 @@ public class TravelOffice {
         return customerCount;
     }
 
-    public String getInfo()
+    /*public String getInfo()
     {
         /*StringBuilder sb = new StringBuilder();
        for(int i=0;i<customerCout;i++)
@@ -35,7 +37,7 @@ public class TravelOffice {
                sb.append("\n");
 
        }
-        return sb.toString();*/
+        return sb.toString();
 
         String report = "";
         for (int i = 0; i < customerCount; i++) {
@@ -43,8 +45,30 @@ public class TravelOffice {
         }
         return report;
 
+        }*/
+
+    @Override
+    public String toString() {
+        /*return "TravelOffice{" +
+                "customers=" + Arrays.toString(customers) +
+                ", customerCount=" + customerCount +
+                '}';
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(" Klient: ");
+        sb.append(Arrays.toString(customers));
+        return sb.toString();*/
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;i<customers.length-1;i++)
+        {
+            sb.append(customers[i].toString()+"\n");
         }
+            return sb.toString();
+
+
+
     }
+}
 
 
 

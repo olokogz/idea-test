@@ -36,10 +36,13 @@ public class Address {
         setCity(city);
         setZip(zip);
     }
-    public String getInfo()
-    {
-       return " Miasto: "+city
-               +" Ulica: "+street
-               +" Kod pocztowy: "+zip;
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "street='" + street + '\'' +
+                ", zip='" + zip + '\'' +
+                ", city='" + city + '\'' +
+                '}';
     }
 }

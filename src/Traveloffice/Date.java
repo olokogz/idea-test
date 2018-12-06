@@ -1,11 +1,13 @@
 package Traveloffice;
 
+import java.util.StringTokenizer;
+
 public class Date {
 
     int year;
     int month;
     int day;
-
+    String string;
     public int getYear() {
         return year;
     }
@@ -36,10 +38,35 @@ public class Date {
         setMonth(month);
         setYear(year);
     }
-
-    public String getInfo()
+    public Date(String string)
     {
-       return "Rok: " + year + " Miesiac: " + month + " Dzien: ";
-
+        this.string=string;
     }
+
+    /*public String getInfo()
+    {
+       return " Rok: " + year + " Miesiac: " + month + " Dzien: ";
+
+    }*/
+    public void setDate()
+    {
+        StringTokenizer parser = new StringTokenizer(string);
+        while(parser.hasMoreTokens())
+        {
+            String token = parser.nextToken();
+            System.out.printf("%%n",token);
+        }
+    }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(" Rok: ");
+        sb.append(year);
+        sb.append(" Miesiac: ");
+        sb.append(month);
+        sb.append(" Dzien: ");
+        sb.append(day);
+        return sb.toString();
+    }
+
 }
