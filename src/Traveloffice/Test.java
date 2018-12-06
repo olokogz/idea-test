@@ -11,9 +11,8 @@ public class Test {
 
         // budujemy wycieczke
 
-        /*Trip trip = new Trip(new Date(2017, 8, 1), new Date(2017, 8, 15), "Egipt", new BigDecimal(100));
-        DomesticTrip dt = new DomesticTrip(new Date(2017, 8, 1), new Date(2017, 8, 15), "Egipt", new BigDecimal(100), new BigDecimal(10));
-        AbroadTrip at = new AbroadTrip(new Date(2018, 5, 2), new Date(2018, 10, 21), "Warsaw", new BigDecimal(100), new BigDecimal(50));
+        DomesticTrip dt = new DomesticTrip(Date.setDate("2018-08-10","-"),Date.setDate("2017-8-15","-"), "Egipt", new BigDecimal(100), new BigDecimal(10));
+        AbroadTrip at = new AbroadTrip(Date.setDate("2018-5-2","-"),Date.setDate("2018-10-21","-"), "Warsaw", new BigDecimal(100), new BigDecimal(50));
 
         // budujemy pierwszego klienta
         Customer customer = new Customer("Jan Kowalski");
@@ -28,12 +27,11 @@ public class Test {
 
         customer = new Customer("Jaroslaw Lis");
         customer.setAddress(new Address("Swietokrzyska 14", "00-666", "Warszawa"));
-        customer.setTrip(trip);
+        customer.setTrip(dt);
         to.addCustomer(customer); // dodajemy go do biura
 
-        System.out.println(to.toString());*/
-        Date d = new Date("10-10-10");
-        d.setDate();
+        System.out.println(to.toString());
+
 
 
     }
