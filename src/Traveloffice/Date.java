@@ -8,6 +8,7 @@ public class Date {
     int month;
     int day;
     String string;
+    String parse;
     public int getYear() {
         return year;
     }
@@ -38,24 +39,21 @@ public class Date {
         setMonth(month);
         setYear(year);
     }
-    public Date(String string)
+    /*public Date(String string, String parse)
     {
-        this.string=string;
-    }
+        setDate(string,parse);
+    }*/
 
     /*public String getInfo()
     {
        return " Rok: " + year + " Miesiac: " + month + " Dzien: ";
 
     }*/
-    public void setDate()
+    public static Date setDate(String string, String parse)
     {
-        StringTokenizer parser = new StringTokenizer(string);
-        while(parser.hasMoreTokens())
-        {
-            String token = parser.nextToken();
-            System.out.printf("%%n",token);
-        }
+        String[] parts = string.split(parse);
+        return new Date(Integer.parseInt(parts[0]),Integer.parseInt(parts[1]),Integer.parseInt(parts[2]));
+
     }
     @Override
     public String toString() {

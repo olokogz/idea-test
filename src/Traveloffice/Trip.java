@@ -51,6 +51,14 @@ public class Trip {
         setStart(start);
         setPrice(price);
     }
+    public Trip(String start, String end,String parse, String destination, BigDecimal price)
+    {
+        setStart(Date.setDate(start,parse));
+        setEnd(Date.setDate(end,parse));
+        setDestination(destination);
+        setPrice(price);
+    }
+
 
     @Override
     public String toString() {
