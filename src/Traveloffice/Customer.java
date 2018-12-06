@@ -2,9 +2,9 @@ package Traveloffice;
 
 public class Customer {
 
-    String name;
-    Address address;
-    Trip trip;
+    private String name;
+    private Address address;
+    private Trip trip;
 
     public String getName() {
         return name;

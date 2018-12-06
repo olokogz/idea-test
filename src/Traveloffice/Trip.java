@@ -2,9 +2,9 @@ package Traveloffice;
 
 public class Trip {
 
-    Date start;
-    Date end;
-    String destination;
+    private Date start;
+    private Date end;
+    private String destination;
 
     public Date getStart() {
         return start;

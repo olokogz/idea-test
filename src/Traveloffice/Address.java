@@ -2,9 +2,9 @@ package Traveloffice;
 
 public class Address {
 
-    String street;
-    String zip;
-    String city;
+    private String street;
+    private String zip;
+    private String city;
 
     public String getStreet() {
         return street;
