@@ -83,7 +83,7 @@ public class TravelOffice {
 
     /*public String getInfo()
     {
-        /*StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
        for(int i=0;i<customerCout;i++)
        {
 
@@ -99,8 +99,9 @@ public class TravelOffice {
         }
         return report;
 
-        }*/
-
+        }
+     */
+   //public void show
 
 
 
@@ -150,8 +151,6 @@ public class TravelOffice {
             sb.append(it.next()+"\n");
         }
         return sb.toString();
-
-
 
     }
 }
