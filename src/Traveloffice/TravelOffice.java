@@ -1,6 +1,7 @@
 package Traveloffice;
 
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -101,9 +102,18 @@ public class TravelOffice {
 
         }
      */
-   //public void show
-
-
+   public void showCustomers()
+   {
+       /*StringBuilder sb = new StringBuilder();
+        for(Customer c : customers)
+            System.out.println(c.toString());
+        */
+        customers.stream().forEach(System.out::println);
+   }
+    public void showTrip()
+    {
+        tripMap.values().stream().forEach(System.out::println);
+    }
 
     @Override
     public boolean equals(Object o) {
