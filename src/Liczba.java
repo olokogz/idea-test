@@ -1,11 +1,17 @@
 public class Liczba {
 
-    public int a;
+    private String ulica;
 
-    public Liczba(int a)
-    {
-        this.a=a;
+    public String getUlica() {
+        return ulica;
     }
 
+    public void setUlica(String ulica) {
+        this.ulica = ulica;
+    }
+        public Liczba()
+        {
+
+        }
 
 }

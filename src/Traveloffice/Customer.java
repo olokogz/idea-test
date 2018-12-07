@@ -1,5 +1,7 @@
 package Traveloffice;
 
+import java.util.Objects;
+
 public class Customer {
 
     private String name;
@@ -50,5 +52,20 @@ public class Customer {
         sb.append(address.toString());
         sb.append(trip.toString());
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return Objects.equals(name, customer.name) &&
+                Objects.equals(address, customer.address) &&
+                Objects.equals(trip, customer.trip);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, address, trip);
     }
 }

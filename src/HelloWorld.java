@@ -3,11 +3,6 @@ import static java.lang.Math.PI;
 import static java.lang.Math.sin;
 public class HelloWorld {
 
-    public void changeVal(Liczba val)
-    {
-        val.a=10;
-
-    }
 
 
     public static void main(String[] args) {
@@ -61,7 +56,7 @@ public class HelloWorld {
         int mod1=x%4;
         int mod2=-x%4;
         int mod3=-x&-4;*/
-        int[][] tab = new int[2][3];
+        /*int[][] tab = new int[2][3];
         for(int i=0;i<tab.length;i++)
             for(int j=0;j<tab[i].length;j++)
             {
@@ -70,7 +65,9 @@ public class HelloWorld {
 
         for(int[] z : tab) {
             System.out.println(z);
-        }
+        }*/
+
+
 
     }
 }

@@ -32,6 +32,11 @@ public class Test {
 
         System.out.println(to.toString());
 
+        Customer cust = to.findCustomerByName("Jan Kowalski");
+        to.removeCustomer(cust);
+        System.out.println(to.toString());
+
+
 
 
     }

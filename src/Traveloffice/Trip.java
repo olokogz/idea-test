@@ -3,7 +3,7 @@ package Traveloffice;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-public class Trip {
+public abstract class Trip {
 
     private Date start;
     private Date end;

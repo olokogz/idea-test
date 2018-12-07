@@ -1,25 +1,79 @@
 package Traveloffice;
 
-import java.util.Arrays;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TravelOffice {
 
-    private Customer[] customers = new Customer[2];
+    //private Customer[] customers = new Customer[2];
+    private HashSet<Customer> customers = new HashSet<>();
+    private Map<String, Trip> tripMap = new HashMap<>();
     private int customerCount=0;
 
 
     public void addCustomer(Customer customer)
     {
 
-        if (customerCount == customers.length) {
+        /*if (customerCount == customers.length) {
             Customer temp[] = new Customer[customers.length + 2];
             System.arraycopy(customers, 0, temp, 0, customers.length);
             customers = temp;
         }
-        customers[customerCount++] = customer;
+        customers[customerCount++] = customer;*/
+        customers.add(customer);
 
     }
+    public void addTrip(String key, Trip value)
+    {
+        tripMap.put(key,value);
+    }
+    public boolean removeTrip(String key)
 
+    {
+        if(tripMap.get(key).equals(key))
+        {
+            tripMap.remove(tripMap.get(key));
+            return true;
+        }
+        else return false;
+    }
+    public Customer findCustomerByName(String value)
+    {
+        /*Iterator<Customer> iterator = customers.iterator();
+        Customer temp = new Customer("")
+        while (iterator.hasNext())
+        {   temp=iterator.next();
+            if(temp.getName().equals(value))
+            {
+                return temp;
+            }
+            else
+
+                return null;
+
+        }*/
+
+        /*
+        ;
+        for(Customer hashset : customers)
+        {
+            if(hashset.getName().equals(value))
+                temp=hashset;
+        }
+        return temp;*/
+        Stream<Customer> stream = customers.stream();
+        List<Customer> collect = stream.filter(x -> x.getName().equals(value)).collect(Collectors.toList());
+
+        return collect.get(0);
+
+
+    }
+    public boolean removeCustomer(Customer customer)
+    {
+        customers.remove(customer);
+        return true;
+    }
 
 
     public int getCustomerCount()
@@ -47,6 +101,23 @@ public class TravelOffice {
 
         }*/
 
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TravelOffice that = (TravelOffice) o;
+        return customerCount == that.customerCount &&
+                customers.equals(that.customers);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(customers);
+    }
+
     @Override
     public String toString() {
         /*return "TravelOffice{" +
@@ -58,12 +129,27 @@ public class TravelOffice {
         sb.append(" Klient: ");
         sb.append(Arrays.toString(customers));
         return sb.toString();*/
-        StringBuilder sb = new StringBuilder();
+        /*StringBuilder sb = new StringBuilder();
         for(int i=0;i<customers.length-1;i++)
         {
             sb.append(customers[i].toString()+"\n");
         }
-            return sb.toString();
+            return sb.toString();*/
+        /*StringBuilder sb = new StringBuilder();
+        for(Customer hashset : customers)
+        {
+            sb.append("Klient: ");
+            sb.append(customers.toString()+"\n");
+        }
+        return sb.toString();
+        */
+        StringBuilder sb = new StringBuilder();
+        Iterator<Customer> it = customers.iterator();
+        while(it.hasNext())
+        {
+            sb.append(it.next()+"\n");
+        }
+        return sb.toString();
 
 
 
